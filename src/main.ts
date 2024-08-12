@@ -4,12 +4,11 @@ import {
   createElement,
   getElement
 } from "./shared/utils/createElement";
+import resizeRendererToDisplaySize from "./shared/utils/resizeRendererToDisplaySize";
 import "./style.css";
 
 const app = getElement("app");
 const canvas = createElement("canvas");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 
 appendElement(app, canvas);
 
@@ -21,19 +20,20 @@ const { fov, aspect, near, far } = {
   fov: 75,
   aspect: 2,
   near: 0.1,
-  far: 5
+  far: 7
 };
 const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-camera.position.z = 2;
+camera.position.z = 4;
 
-const geometry = new THREE.BoxGeometry(1, 1, 1);
+const boxGeometry = new THREE.BoxGeometry(1, 1, 1);
+const sphereGeometry = new THREE.SphereGeometry(0.7, 10, 10);
 
 const light = new THREE.DirectionalLight(0xffffff, 3);
 light.position.set(-1, 2, 4);
 scene.add(light);
 
 const makeInstance = (
-  geometry: THREE.BoxGeometry,
+  geometry: THREE.BoxGeometry | THREE.SphereGeometry,
   color: number,
   x: number
 ) => {
@@ -45,13 +45,19 @@ const makeInstance = (
 };
 
 const cubes = [
-  makeInstance(geometry, 0x44aa88, 0),
-  makeInstance(geometry, 0x8844aa, -2),
-  makeInstance(geometry, 0xaa8844, 2)
+  makeInstance(boxGeometry, 0x00fab0, 0),
+  makeInstance(sphereGeometry, 0xff84ab, -2),
+  makeInstance(boxGeometry, 0x5500ff, 2)
 ];
 
 const render = (time: number) => {
   time *= 0.001;
+
+  if (resizeRendererToDisplaySize(renderer)) {
+    const canvas = renderer.domElement;
+    camera.aspect = canvas.clientWidth / canvas.clientHeight;
+    camera.updateProjectionMatrix();
+  }
 
   cubes.forEach((cube, idx) => {
     const speed = 0.3;
