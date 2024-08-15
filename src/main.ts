@@ -57,7 +57,7 @@ const GlTFloader = new GLTFLoader();
 let model: THREE.Group<THREE.Object3DEventMap> | null = null;
 
 GlTFloader.load(
-  "./src/assets/DamagedHelmet.glb",
+  "./src/assets/glb/DamagedHelmet.glb",
   (gltf) => {
     model = gltf.scene;
     model.position.y = 2;
