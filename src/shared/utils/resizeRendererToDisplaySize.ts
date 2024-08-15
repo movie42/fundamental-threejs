@@ -12,4 +12,5 @@ function resizeRendererToDisplaySize(renderer: WebGLRenderer) {
   }
   return needResize;
 }
+
 export default resizeRendererToDisplaySize;

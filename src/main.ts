@@ -1,10 +1,11 @@
 import * as THREE from "three";
+import { GLTFLoader } from "three-stdlib";
 import {
   appendElement,
   createElement,
-  getElement
-} from "./shared/utils/createElement";
-import resizeRendererToDisplaySize from "./shared/utils/resizeRendererToDisplaySize";
+  getElement,
+  resizeRendererToDisplaySize
+} from "./shared/utils";
 import "./style.css";
 
 const app = getElement("app");
@@ -50,8 +51,35 @@ const cubes = [
   makeInstance(boxGeometry, 0x5500ff, 2)
 ];
 
+// 영근님 코드 보고 그대로 배껴본거
+const GlTFloader = new GLTFLoader();
+
+let model: THREE.Group<THREE.Object3DEventMap> | null = null;
+
+GlTFloader.load(
+  "src/assets/DamagedHelmet.glb",
+  (gltf) => {
+    model = gltf.scene;
+    model.position.y = 2;
+    model.scale.set(0.7, 0.7, 0.7);
+    model.traverse((node) => {
+      if (node instanceof THREE.Mesh) {
+        node.material.envMap = scene;
+        node.material.needsUpdate = true;
+      }
+    });
+    scene.add(model);
+  },
+  undefined,
+  (error) => {
+    console.error("error occurred! while loading gltf model");
+  }
+);
+
 const render = (time: number) => {
   time *= 0.001;
+  const speed = 0.3;
+  const rot = time * speed;
 
   if (resizeRendererToDisplaySize(renderer)) {
     const canvas = renderer.domElement;
@@ -59,9 +87,12 @@ const render = (time: number) => {
     camera.updateProjectionMatrix();
   }
 
+  if (model) {
+    model.rotation.y = rot;
+    model.rotation.x = rot;
+  }
+
   cubes.forEach((cube, idx) => {
-    const speed = 0.3;
-    const rot = time * speed;
     cube.rotation.x = rot;
     cube.rotation.y = rot;
   });
