@@ -71,7 +71,7 @@ GlTFloader.load(
     scene.add(model);
   },
   undefined,
-  (error) => {
+  () => {
     console.error("error occurred! while loading gltf model");
   }
 );
@@ -92,7 +92,7 @@ const render = (time: number) => {
     model.rotation.x = rot;
   }
 
-  cubes.forEach((cube, idx) => {
+  cubes.forEach((cube) => {
     cube.rotation.x = rot;
     cube.rotation.y = rot;
   });
