@@ -1,8 +1,14 @@
-import { defineConfig } from "vite";
+import pug from "@vituum/vite-plugin-pug";
+import vituum from "vituum";
 
-export default defineConfig({
-  build: {
-    assetsInlineLimit: 0
-  },
-  assetsInclude: ["**/*.glb"]
-});
+export default {
+  plugins: [
+    vituum(),
+    pug({
+      root: "./src"
+    })
+  ],
+  resolve: {
+    alias: [{ find: "@", replacement: "/src" }]
+  }
+};
