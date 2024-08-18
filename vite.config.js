@@ -3,7 +3,8 @@ import vituum from "vituum";
 
 const nav = [
   { url: "/", name: "Home" },
-  { url: "/helloworld/index", name: "Hello World" }
+  { url: "/helloworld/index", name: "Hello World" },
+  { url: "/scenegraph/index", name: "Scene Graph" }
 ];
 
 export default {
