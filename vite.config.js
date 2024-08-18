@@ -4,7 +4,14 @@ import vituum from "vituum";
 const nav = [
   { url: "/", name: "Home" },
   { url: "/helloworld/index", name: "Hello World" },
-  { url: "/scenegraph/index", name: "Scene Graph" }
+  {
+    url: "/scenegraph/solarSystem/solarSystem",
+    name: "Scene Graph Solar System"
+  },
+  {
+    url: "/scenegraph/movingTank/movingTank",
+    name: "Scene Graph Moving Tank"
+  }
 ];
 
 export default {
