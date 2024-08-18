@@ -6,6 +6,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+
+  --font-dark-mode-color:#fff;
+  --font-light-mode-color:#000;
+  --primary-01: #0059ff;
 }
 
 html,
@@ -21,4 +26,30 @@ canvas {
   display: block;
   width: 100vw;
   height: 100vh;
+}
+
+
+nav{
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  padding:0;
+  margin:0;
+  background-color:black;
+  #navigation{
+    padding:0;
+    margin:0;
+   li{
+    list-style: none;
+    a{
+      text-decoration: none;
+      color:var(--font-dark-mode-color);
+      &:hover{
+        color:var(--font-dark-mode-color);
+        background-color:var(--primary-01);
+      }
+    }
+   }
+  }
 }

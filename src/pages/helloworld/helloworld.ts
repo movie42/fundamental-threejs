@@ -4,7 +4,6 @@ import {
   getElement,
   resizeRendererToDisplaySize
 } from "@/shared/utils";
-import "@/style.css";
 import * as THREE from "three";
 import { GLTFLoader } from "three-stdlib";
 
