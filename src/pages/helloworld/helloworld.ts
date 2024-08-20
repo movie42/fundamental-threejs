@@ -7,7 +7,7 @@ import {
 import * as THREE from "three";
 import { GLTFLoader } from "three-stdlib";
 
-const app = getElement("app");
+const app = getElement("#app");
 const canvas = createElement("canvas");
 
 appendElement(app, canvas);

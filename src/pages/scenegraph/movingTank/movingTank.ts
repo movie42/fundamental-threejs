@@ -6,7 +6,7 @@ import {
 } from "@/shared/utils";
 import * as THREE from "three";
 
-const app = getElement("app");
+const app = getElement("#app");
 const canvas = createElement("canvas");
 appendElement(app, canvas);
 const renderer = new THREE.WebGLRenderer({ antialias: true, canvas });

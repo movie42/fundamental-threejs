@@ -11,6 +11,10 @@ const nav = [
   {
     url: "/scenegraph/movingTank/movingTank",
     name: "Scene Graph Moving Tank"
+  },
+  {
+    url: "/camera/camera",
+    name: "Camera"
   }
 ];
 

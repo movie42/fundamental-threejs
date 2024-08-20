@@ -7,8 +7,10 @@ function createElement<K extends keyof HTMLElementTagNameMap>(
   return $.createElement(tagName, options);
 }
 
-function getElement<T extends HTMLElement = HTMLElement>(id: string): T | null {
-  return $.getElementById(id) as T | null;
+function getElement<T extends HTMLElement = HTMLElement>(
+  queryString: string
+): T | null {
+  return $.querySelector(queryString) as T | null;
 }
 
 function appendElement<T extends HTMLElement, N extends HTMLElement>(
