@@ -123,12 +123,12 @@ scene.add(cameraHelper);
   scene.add(light.target);
 }
 
-function updateCamera() {
-  camera.updateProjectionMatrix();
-}
+// function updateCamera() {
+//   camera.updateProjectionMatrix();
+// }
 
 // const clock = new THREE.Clock();
-const render = (time: number) => {
+const render = () => {
   resizeRendererToDisplaySize(renderer);
 
   // turn on the scissor
@@ -146,8 +146,6 @@ const render = (time: number) => {
     // don't draw the camera helper in the original view
     cameraHelper.visible = false;
 
-    scene.background.set(0x000000);
-
     // render
     renderer.render(scene, camera);
   }
@@ -162,8 +160,6 @@ const render = (time: number) => {
 
     // draw the camera helper in the 2nd view
     cameraHelper.visible = true;
-
-    scene.background.set(0x000040);
 
     renderer.render(scene, camera2);
   }

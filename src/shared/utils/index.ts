@@ -1,3 +1,4 @@
+export { ColorGUIHelper } from "./colorGUIHelper";
 export { appendElement, createElement, getElement } from "./createElement";
 export { AxisGridHelper, makeAxisGrid } from "./makeAxisGrid";
 export { default as MinMaxGUIHelper } from "./minMaxGUIHelder";

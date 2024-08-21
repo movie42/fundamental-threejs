@@ -15,6 +15,10 @@ const nav = [
   {
     url: "/camera/camera",
     name: "Camera"
+  },
+  {
+    url: "/light/light",
+    name: "Light"
   }
 ];
 
