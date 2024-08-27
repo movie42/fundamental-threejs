@@ -19,6 +19,10 @@ const nav = [
   {
     url: "/light/light",
     name: "Light"
+  },
+  {
+    url: "/geometry/geometry",
+    name: "Geometry"
   }
 ];
 
