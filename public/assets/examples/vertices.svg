@@ -1,0 +1,9 @@
+<svg viewBox="0 0 200 110" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="10,90 100,30 190,90" fill="lightblue" stroke="blue" stroke-width="2"/>
+  <circle cx="10" cy="90" r="3" fill="red"/>
+  <circle cx="100" cy="30" r="3" fill="red"/>
+  <circle cx="190" cy="90" r="3" fill="red"/>
+  <text x="5" y="85" font-size="10">V1</text>
+  <text x="95" y="25" font-size="10">V2</text>
+  <text x="185" y="85" font-size="10">V3</text>
+</svg>

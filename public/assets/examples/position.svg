@@ -1,0 +1,17 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- X축 -->
+  <line x1="20" y1="180" x2="180" y2="180" stroke="red" stroke-width="2"/>
+  <text x="185" y="185" fill="red">X</text>
+  
+  <!-- Y축 -->
+  <line x1="20" y1="180" x2="20" y2="20" stroke="green" stroke-width="2"/>
+  <text x="10" y="15" fill="green">Y</text>
+  
+  <!-- Z축 -->
+  <line x1="20" y1="180" x2="160" y2="40" stroke="blue" stroke-width="2"/>
+  <text x="165" y="35" fill="blue">Z</text>
+  
+  <!-- 점 -->
+  <circle cx="100" cy="100" r="5" fill="purple"/>
+  <text x="110" y="95" font-size="12">P(x,y,z)</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- 좌표축 -->
+  <line x1="10" y1="110" x2="210" y2="110" stroke="black" stroke-width="1"/>
+  <line x1="10" y1="110" x2="10" y2="10" stroke="black" stroke-width="1"/>
+  
+  <!-- 원본 벡터 -->
+  <line x1="10" y1="110" x2="130" y2="50" stroke="blue" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="70" y="70" fill="blue" font-size="12">Original</text>
+  
+  <!-- 정규화된 벡터 -->
+  <line x1="10" y1="110" x2="70" y2="85" stroke="red" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="40" y="95" fill="red" font-size="12">Normalized</text>
+  
+  <!-- 단위 원 -->
+  <circle cx="10" cy="110" r="60" fill="none" stroke="gray" stroke-dasharray="4"/>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+  </defs>
+</svg>

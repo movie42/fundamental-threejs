@@ -1,0 +1,19 @@
+<svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- 1 세그먼트 -->
+  <rect x="10" y="10" width="80" height="80" fill="none" stroke="blue" stroke-width="2"/>
+  <text x="35" y="105" font-size="12">1 segment</text>
+  
+  <!-- 2 세그먼트 -->
+  <rect x="110" y="10" width="80" height="80" fill="none" stroke="blue" stroke-width="2"/>
+  <line x1="150" y1="10" x2="150" y2="90" stroke="blue" stroke-width="1"/>
+  <line x1="110" y1="50" x2="190" y2="50" stroke="blue" stroke-width="1"/>
+  <text x="130" y="105" font-size="12">2 segments</text>
+  
+  <!-- 3 세그먼트 -->
+  <rect x="210" y="10" width="80" height="80" fill="none" stroke="blue" stroke-width="2"/>
+  <line x1="236.7" y1="10" x2="236.7" y2="90" stroke="blue" stroke-width="1"/>
+  <line x1="263.3" y1="10" x2="263.3" y2="90" stroke="blue" stroke-width="1"/>
+  <line x1="210" y1="36.7" x2="290" y2="36.7" stroke="blue" stroke-width="1"/>
+  <line x1="210" y1="63.3" x2="290" y2="63.3" stroke="blue" stroke-width="1"/>
+  <text x="225" y="105" font-size="12">3 segments</text>
+</svg>

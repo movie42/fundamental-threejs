@@ -1,0 +1,25 @@
+<svg viewBox="0 -10 200 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- 표면 -->
+  <line x1="20" y1="100" x2="180" y2="100" stroke="black" stroke-width="2"/>
+  
+  <!-- 법선 벡터 -->
+  <line x1="100" y1="100" x2="100" y2="20" stroke="blue" stroke-width="2" marker-end="url(#arrowhead-blue)"/>
+  <text x="105" y="60" fill="blue" font-size="12">Normal</text>
+  
+  <!-- 빛 방향 -->
+  <line x1="100" y1="100" x2="160" y2="40" stroke="yellow" stroke-width="2" marker-end="url(#arrowhead-yellow)"/>
+  <text x="140" y="30" fill="orange" font-size="12">Light</text>
+  
+  <!-- 각도 표시 -->
+  <path d="M100,100 A40,40 0 0,1 128,72" fill="none" stroke="red" stroke-width="1"/>
+  <text x="120" y="85" fill="red" font-size="10">θ</text>
+  
+  <defs>
+    <marker id="arrowhead-blue" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="blue"/>
+    </marker>
+    <marker id="arrowhead-yellow" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="yellow"/>
+    </marker>
+  </defs>
+</svg>
