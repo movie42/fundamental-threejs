@@ -8,4 +8,5 @@
 - [4. camera](./document/3.camera.md)
 - [5. light](./document/4.light.md)
 - [6. geometry](./document/6.geometry.md)
+- [7. toyproject](./document/10.toyproject.md)
 - [appendix](./document/appendix.md)
